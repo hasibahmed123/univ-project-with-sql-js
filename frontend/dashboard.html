@@ -1,0 +1,177 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Wild West Grill</title>
+    <script src="./script.js"></script>
+
+    <!-- Internal CSS to match design -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #fff;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 28px;
+        color: #ffa500;
+      }
+
+      nav a {
+        margin-left: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ffa500;
+      }
+
+      main {
+        padding: 50px 80px;
+      }
+
+      section {
+        background-color: #1f1f1f;
+        padding: 30px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+      }
+
+      section h2 {
+        color: #ffa500;
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #fff;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #333;
+      }
+
+      th {
+        background-color: #292929;
+        color: #ffa500;
+      }
+
+      tr:hover {
+        background-color: #2a2a2a;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      ul span {
+        font-weight: bold;
+        color: #00e676;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #1a1a1a;
+        font-size: 14px;
+        color: #aaa;
+        margin-top: 50px;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 30px;
+        }
+
+        table,
+        th,
+        td {
+          font-size: 14px;
+        }
+
+        section {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📊 Admin Dashboard</h1>
+      <nav>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Order Now</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reservations.html">Reservations</a>
+
+        <a href="reviews.html">Reviews</a>
+          <a href="inventory.html">Inventory</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Recent Orders</h2>
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Table</th>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be added dynamically -->
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Summary</h2>
+        <ul id="summary">
+          <li>Total Orders: <span id="totalOrders">0</span></li>
+          <li>Most Popular Item: <span id="popularItem">N/A</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Wild West Grill</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

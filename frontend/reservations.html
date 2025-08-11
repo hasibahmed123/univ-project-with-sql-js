@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations | Wild West Grill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🤠 Reservations</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Order Now</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="inventory.html">Inventory</a>
+      </nav>
+    </header>
+
+    <main class="reservations-page">
+      <div class="content-container">
+        <section class="reservation-section">
+          <div class="form-container">
+            <h2 class="section-title">Make a Reservation</h2>
+            <form id="reservationForm" class="reservation-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="customerName">
+                    <i class="fas fa-user"></i>
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="customerName"
+                    required
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactNumber">
+                    <i class="fas fa-phone"></i>
+                    Contact Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="contactNumber"
+                    required
+                    placeholder="Your phone number"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="tableNumber">
+                    <i class="fas fa-chair"></i>
+                    Table Number
+                  </label>
+                  <input
+                    type="number"
+                    id="tableNumber"
+                    required
+                    min="1"
+                    placeholder="Select table"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="numGuests">
+                    <i class="fas fa-users"></i>
+                    Number of Guests
+                  </label>
+                  <input
+                    type="number"
+                    id="numGuests"
+                    required
+                    min="1"
+                    placeholder="How many guests?"
+                  />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="reservationTime">
+                    <i class="fas fa-calendar-alt"></i>
+                    Date & Time
+                  </label>
+                  <input type="datetime-local" id="reservationTime" required />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="specialRequests">
+                    <i class="fas fa-concierge-bell"></i>
+                    Special Requests
+                  </label>
+                  <textarea
+                    id="specialRequests"
+                    rows="3"
+                    placeholder="Any special requests or dietary requirements?"
+                  ></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                  <button type="submit" class="submit-btn">
+                    <i class="fas fa-check"></i>
+                    Make Reservation
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="reservations-list-section">
+          <div class="table-container">
+            <h2 class="section-title">Current Reservations</h2>
+            <div class="table-responsive">
+              <table id="reservationsTable" class="reservations-table">
+                <thead>
+                  <tr>
+                    <th><i class="fas fa-user"></i> Name</th>
+                    <th><i class="fas fa-chair"></i> Table</th>
+                    <th><i class="fas fa-users"></i> Guests</th>
+                    <th><i class="fas fa-calendar-alt"></i> Date & Time</th>
+                    <th><i class="fas fa-phone"></i> Contact</th>
+                    <th>
+                      <i class="fas fa-concierge-bell"></i> Special Requests
+                    </th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>

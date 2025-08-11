@@ -1,0 +1,195 @@
+<!-- menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Wild West Grill</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+
+    <script>
+      fetch("/api/menu")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data); // Display menu items
+          // You can now render them in HTML
+        })
+        .catch((error) => console.error("Error:", error));
+    </script>
+
+    <!-- Internal CSS for Flexbox layout and beautiful design -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #fff;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 28px;
+        color: #ffa500;
+      }
+
+      nav a {
+        margin-left: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ffa500;
+      }
+
+      main {
+        padding: 50px 80px;
+      }
+
+      #menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .menu-card {
+        background-color: #1f1f1f;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+      }
+
+      .menu-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+      }
+
+      .card-body h3 {
+        font-size: 20px;
+        color: #ffa500;
+        margin-bottom: 10px;
+      }
+
+      .card-body p {
+        font-size: 14px;
+        color: #ccc;
+        margin-bottom: 15px;
+      }
+
+      .card-body span {
+        font-weight: bold;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #1a1a1a;
+        font-size: 14px;
+        color: #aaa;
+        margin-top: 50px;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 30px;
+        }
+
+        .menu-card {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🍽️ Menu</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Order Now</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="reviews.html">Reviews</a>
+          <a href="inventory.html">Inventory</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="menu-items" class="menu-list">
+        <!-- Sample Cards with Images -->
+        <div class="menu-card">
+          <img src="./pics/Steak-Cowboy-scaled.webp" alt="Cowboy Steak" />
+          <div class="card-body">
+            <h3>Grilled Cowboy Steak</h3>
+            <p>
+              Juicy ribeye steak grilled to perfection and served with rustic
+              sides.
+            </p>
+            <span>$19.99</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./pics/pngtree-burger.png" alt="Western Burger" />
+          <div class="card-body">
+            <h3>Western BBQ Burger</h3>
+            <p>Thick beef patty with BBQ sauce, cheddar, and crispy onions.</p>
+            <span>$12.49</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./pics/tacos.jpg" alt="Texas Tacos" />
+          <div class="card-body">
+            <h3>Texas Beef Tacos</h3>
+            <p>Soft tortillas stuffed with spiced beef, cheese, and salsa.</p>
+            <span>$9.99</span>
+          </div>
+        </div>
+
+        <!-- More cards can be added dynamically via JS -->
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Wild West Grill</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

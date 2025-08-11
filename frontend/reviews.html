@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews | Wild West Grill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🤠 Customer Reviews</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Order Now</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="reviews.html">Reviews</a>
+         <a href="inventory.html">Inventory</a>
+      </nav>
+    </header>
+
+    <main class="reviews-page">
+      <div class="content-container">
+        <section class="review-form-section">
+          <div class="form-container">
+            <h2 class="section-title">Share Your Experience</h2>
+            <div class="rating-info">
+              <div class="rating-star">⭐</div>
+              <p>Your feedback helps us serve you better!</p>
+            </div>
+            <form id="reviewForm" class="review-form">
+              <div class="form-group">
+                <label for="customerName">
+                  <i class="fas fa-user"></i>
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="customerName"
+                  required
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  class="customer-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="tableNumber">
+                  <i class="fas fa-chair"></i>
+                  Table Number
+                </label>
+                <input
+                  type="number"
+                  id="tableNumber"
+                  required
+                  min="1"
+                  placeholder="Your table number"
+                  class="customer-input"
+                />
+              </div>
+
+              <div class="form-group rating-group">
+                <label>
+                  <i class="fas fa-star"></i>
+                  Your Rating
+                </label>
+                <div class="rating-select">
+                  <select id="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                    <option value="4">⭐⭐⭐⭐ Very Good</option>
+                    <option value="3">⭐⭐⭐ Good</option>
+                    <option value="2">⭐⭐ Fair</option>
+                    <option value="1">⭐ Poor</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="comment">
+                  <i class="fas fa-comment"></i>
+                  Your Review
+                </label>
+                <textarea
+                  id="comment"
+                  rows="4"
+                  required
+                  placeholder="Tell us about your dining experience..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Submit Review
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <section class="reviews-display-section">
+          <div class="reviews-container">
+            <h2 class="section-title">
+              <i class="fas fa-comments"></i>
+              Customer Reviews
+            </h2>
+            <div id="reviewsContainer" class="reviews-grid"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>

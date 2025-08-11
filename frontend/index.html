@@ -1,0 +1,162 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wild West Grill</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Internal Styling to match the professional design -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: #0f0f0f;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        padding: 20px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header h1 {
+        font-size: 28px;
+        color: #ffa500;
+      }
+
+      nav a {
+        margin-left: 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ffa500;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 80px;
+        background: linear-gradient(
+            rgba(15, 15, 15, 0.9),
+            rgba(15, 15, 15, 0.9)
+          ),
+          url("./pics/barbecue-food-seafood.png") no-repeat center center;
+        background-size: cover;
+        min-height: 90vh;
+      }
+
+      .text-content {
+        max-width: 50%;
+      }
+
+      .text-content h2 {
+        font-size: 48px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .text-content p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: #ddd;
+      }
+
+      .cta-btn {
+        background-color: #ffa500;
+        color: #000;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background 0.3s ease;
+        text-decoration: none;
+      }
+
+      .cta-btn:hover {
+        background-color: #ff8800;
+      }
+
+      .food-image img {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+          text-align: center;
+        }
+        .text-content,
+        .food-image {
+          max-width: 100%;
+        }
+        .food-image img {
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🤠 Wild West Grill</h1>
+      <nav>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Order Now</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reservations.html">Reservations</a>
+
+        <a href="reviews.html">Reviews</a>
+ <a href="inventory.html">Inventory</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="text-content">
+        <h2>Enjoy Our<br />Delicious Meal</h2>
+        <p>
+          Feast like a cowboy. Order your favorite meals straight from the
+          prairie. Our grills are always hot and the meat always juicy. Saddle
+          up!
+        </p>
+        <a href="orders.html" class="cta-btn">Book a Table</a>
+      </div>
+      <div class="food-image">
+        <img src="./pics/barbecue-food-seafood.png" alt="Grilled Food" />
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Wild West Grill</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
